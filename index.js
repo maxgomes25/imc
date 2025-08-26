@@ -54,8 +54,43 @@ function actionCalcularIMCBuilder() {
     }
 }
 
+function classificaIMC(imc) {
+    if (imc < 18.5) return 'abaixo';
+    if (imc < 25) return 'normal';
+    if (imc < 30) return 'sobrepeso';
+    if (imc < 35) return 'obesidade1';
+    if (imc < 40) return 'obesidade2';
+    return 'obesidade3';
+}
+
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const altura = parseFloat(document.getElementById('altura').value.replace(',', '.'));
+    const peso = parseFloat(document.getElementById('peso').value.replace(',', '.'));
+    if (!altura || !peso) return;
+
+    const imc = peso / (altura * altura);
+    document.getElementById('imc').textContent = imc.toFixed(2);
+
+    // Destacar linha da tabela
+    const classe = classificaIMC(imc);
+    document.querySelectorAll('#imc-table tbody tr').forEach(tr => {
+        tr.classList.remove('highlight');
+        if (tr.getAttribute('data-class') === classe) {
+            tr.classList.add('highlight');
+        }
+    });
+});
+
 window.onload = function () {
     document
         .getElementById("calcular")
         .addEventListener("click", actionCalcularIMCBuilder());
-};
+}
+
+// Adicione ao seu arquivo JS principal
+document.getElementById('clear-btn').addEventListener('click', function() {
+  document.getElementById('altura').value = '';
+  document.getElementById('peso').value = '';
+  document.getElementById('imc').textContent = '';
+});

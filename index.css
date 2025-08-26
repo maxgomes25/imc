@@ -69,6 +69,21 @@
   box-shadow: none;
 }
 
+.data .form #clear-btn {
+  margin-top: 2em;
+  margin-left: 1em;
+  background-color: #A94442;
+  border: 1px solid #A94442;
+  color: #FFF;
+  min-width: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 2px #000000;
+}
+.data .form #clear-btn:hover {
+  background-color: #C9302C;
+  border: 1px solid #C9302C;
+}
+
 #imc-table {
     width: 100%;
     border-collapse: collapse;

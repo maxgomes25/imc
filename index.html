@@ -25,6 +25,40 @@
             </div>
             <div class="data">
                 <p>Seu IMC &eacute; <span id="imc"></span></p>
+                <table id="imc-table">
+                    <thead>
+                        <tr>
+                            <th>Intervalo IMC</th>
+                            <th>Classificação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-class="abaixo">
+                            <td>&lt; 18.5</td>
+                            <td>Abaixo do peso</td>
+                        </tr>
+                        <tr data-class="normal">
+                            <td>18.5 - 24.9</td>
+                            <td>Peso normal</td>
+                        </tr>
+                        <tr data-class="sobrepeso">
+                            <td>25 - 29.9</td>
+                            <td>Sobrepeso</td>
+                        </tr>
+                        <tr data-class="obesidade1">
+                            <td>30 - 34.9</td>
+                            <td>Obesidade grau I</td>
+                        </tr>
+                        <tr data-class="obesidade2">
+                            <td>35 - 39.9</td>
+                            <td>Obesidade grau II</td>
+                        </tr>
+                        <tr data-class="obesidade3">
+                            <td>&ge; 40</td>
+                            <td>Obesidade grau III</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </body>

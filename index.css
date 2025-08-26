@@ -62,3 +62,24 @@
   border: 1px solid #504869;
   box-shadow: 1.5px 1.5px 2px #808080;
 }
+
+.data .form button:disabled {
+  background-color: #A9A9A9;
+  border: 1px solid #A9A9A9;
+  box-shadow: none;
+}
+
+#imc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+#imc-table th, #imc-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+#imc-table tr.highlight {
+    background-color: #ffe066;
+    font-weight: bold;
+}
